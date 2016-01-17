@@ -24,6 +24,14 @@ chmod +x file_server_linux_amd64
 ./file_server_linux_amd64 -dir $HOME  
 
 ```
+with systemd:
+place the `file-server.service` file in `/etc/systemd/system`
+
+run `systemctl start file-server` to start file server on port 8080
+
+run `systemctl enable file-server` to start fileserver on boot
+
+
 The docker image, can receive env variables:
 
 FILESERVER_AUTH = username:password for handling basic auth
