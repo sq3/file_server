@@ -1,0 +1,13 @@
+[Unit]
+Description=FileServerFrontend
+
+# The following will be required if you are using FileServer with an httpd proxy
+#After=httpd.service
+#Requires=httpd.service
+
+[Service]
+TimeoutStartSec=0
+ExecStart=/usr/local/bin/file-server -dir /srv/data/media
+
+[Install]
+WantedBy=multi-user.target
